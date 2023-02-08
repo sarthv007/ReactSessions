@@ -9,6 +9,7 @@ import SubscriberCounter from "./Components/SubscriberCounter";
 import Counter from "./Components/Counter";
 import DestructuredComp from "./Components/DestructuredComp";
 import DestructureClassComp from "./Components/DestructureClassComp";
+import SubscribeCountToggle from "./Components/SubscribeCountToggle";
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
       >
         <p>This is a paragraph</p>
       </Welcome> */}
-      {/* <SubscriberCounter /> */}
+      <SubscriberCounter />
       {/* <Counter></Counter> */}
       {/* <DestructuredComp
         count={100}
@@ -39,7 +40,7 @@ function App() {
         <p>This is a paragraph</p>
       </DestructuredComp> */}
 
-      <DestructureClassComp
+      {/* <DestructureClassComp
         count={100}
         name="sarthak"
         title={"Welcome to react js"}
@@ -48,7 +49,8 @@ function App() {
         person={{ firstName: "sarthak", lastName: "vaidya" }}
       >
         <p>This is a paragraph</p>
-      </DestructureClassComp>
+      </DestructureClassComp> */}
+      <SubscribeCountToggle />
     </div>
   );
 }
