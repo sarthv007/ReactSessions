@@ -10,6 +10,10 @@ import Counter from "./Components/Counter";
 import DestructuredComp from "./Components/DestructuredComp";
 import DestructureClassComp from "./Components/DestructureClassComp";
 import SubscribeCountToggle from "./Components/SubscribeCountToggle";
+import WelcomeDemo from "./Components/WelcomeDemo";
+import EventBinding from "./Components/EventBinding";
+import ParentComponent from "./Components/ParentComponent";
+import ProfileComponent from "./Components/ProfileComponent";
 
 function App() {
   return (
@@ -27,7 +31,7 @@ function App() {
       >
         <p>This is a paragraph</p>
       </Welcome> */}
-      <SubscriberCounter />
+      {/* <SubscriberCounter /> */}
       {/* <Counter></Counter> */}
       {/* <DestructuredComp
         count={100}
@@ -50,7 +54,11 @@ function App() {
       >
         <p>This is a paragraph</p>
       </DestructureClassComp> */}
-      <SubscribeCountToggle />
+      {/* <SubscribeCountToggle /> */}
+      {/* <WelcomeDemo></WelcomeDemo> */}
+      {/* <EventBinding></EventBinding> */}
+      <ParentComponent></ParentComponent>
+      {/* <ProfileComponent></ProfileComponent> */}
     </div>
   );
 }

@@ -26,11 +26,11 @@ class Counter extends Component {
   };
 
   incrementByFive = () => {
-    this.increment();
-    this.increment();
-    this.increment();
-    this.increment();
-    this.increment();
+    // this.increment();
+    // this.increment();
+    // this.increment();
+    // this.increment();
+    // this.increment();
   };
 
   render() {
