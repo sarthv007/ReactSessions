@@ -14,6 +14,9 @@ import WelcomeDemo from "./Components/WelcomeDemo";
 import EventBinding from "./Components/EventBinding";
 import ParentComponent from "./Components/ParentComponent";
 import ProfileComponent from "./Components/ProfileComponent";
+import Greet from "./Components/Greet";
+import NameList from "./Components/NameList";
+import UsersList from "./Components/UsersList";
 
 function App() {
   return (
@@ -57,8 +60,11 @@ function App() {
       {/* <SubscribeCountToggle /> */}
       {/* <WelcomeDemo></WelcomeDemo> */}
       {/* <EventBinding></EventBinding> */}
-      <ParentComponent></ParentComponent>
+      {/* <ParentComponent></ParentComponent> */}
       {/* <ProfileComponent></ProfileComponent> */}
+      {/* <NameList /> */}
+      {/* <Greet /> */}
+      <UsersList></UsersList>
     </div>
   );
 }
