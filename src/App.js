@@ -17,6 +17,8 @@ import ProfileComponent from "./Components/ProfileComponent";
 import Greet from "./Components/Greet";
 import NameList from "./Components/NameList";
 import UsersList from "./Components/UsersList";
+import TableComponent from "./Components/TableComponent";
+import FormComponent from "./Components/FormComponent";
 
 function App() {
   return (
@@ -64,7 +66,10 @@ function App() {
       {/* <ProfileComponent></ProfileComponent> */}
       {/* <NameList /> */}
       {/* <Greet /> */}
-      <UsersList></UsersList>
+      {/* <UsersList></UsersList> */}
+      {/* <Greet /> */}
+      {/* <TableComponent /> */}
+      <FormComponent></FormComponent>
     </div>
   );
 }
