@@ -19,6 +19,10 @@ import NameList from "./Components/NameList";
 import UsersList from "./Components/UsersList";
 import TableComponent from "./Components/TableComponent";
 import FormComponent from "./Components/FormComponent";
+import LifeCycleAComp from "./Components/LifeCycleAComp";
+import ComponentC from "./Components/ComponentC";
+import UpdateLifeCycleMethod from "./Components/UpdateLifeCycleMethod";
+import UnmountingPhaseComp from "./Components/UnmountingPhaseComp";
 
 function App() {
   return (
@@ -69,7 +73,10 @@ function App() {
       {/* <UsersList></UsersList> */}
       {/* <Greet /> */}
       {/* <TableComponent /> */}
-      <FormComponent></FormComponent>
+      {/* <FormComponent></FormComponent> */}
+      {/* <ComponentC name="Nitin" /> */}
+      {/* <UpdateLifeCycleMethod></UpdateLifeCycleMethod> */}
+      <UnmountingPhaseComp />
     </div>
   );
 }

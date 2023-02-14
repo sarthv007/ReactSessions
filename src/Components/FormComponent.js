@@ -82,8 +82,8 @@ export class FormComponent extends Component {
     const { firstName, lastName, country, error } = this.state;
     console.log(error);
     return (
-      <>
-        <h3>Using CSS to style an HTML Form</h3>
+      <div className="container">
+        <h1>React Form</h1>
 
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="fname">First Name</label>
@@ -126,7 +126,7 @@ export class FormComponent extends Component {
 
           <input type="submit" value="Submit" />
         </form>
-      </>
+      </div>
     );
   }
 }
