@@ -23,6 +23,11 @@ import LifeCycleAComp from "./Components/LifeCycleAComp";
 import ComponentC from "./Components/ComponentC";
 import UpdateLifeCycleMethod from "./Components/UpdateLifeCycleMethod";
 import UnmountingPhaseComp from "./Components/UnmountingPhaseComp";
+import LifeCycleDemo from "./Components/LifeCycleDemo";
+import HeroComponent from "./Components/HeroComponent";
+import ErrorBoundry from "./Components/ErrorBoundry";
+import ParentComp from "./Components/ParentComp";
+import PortalDemo from "./Components/PortalDemo";
 
 function App() {
   return (
@@ -76,7 +81,21 @@ function App() {
       {/* <FormComponent></FormComponent> */}
       {/* <ComponentC name="Nitin" /> */}
       {/* <UpdateLifeCycleMethod></UpdateLifeCycleMethod> */}
-      <UnmountingPhaseComp />
+      {/* <UnmountingPhaseComp /> */}
+      {/* <LifeCycleDemo /> */}
+      {/* <ErrorBoundry>
+        <HeroComponent heroName={"SpiderMan"} />
+      </ErrorBoundry>
+
+      <ErrorBoundry>
+        <HeroComponent heroName={"BatMan"} />
+      </ErrorBoundry>
+
+      <ErrorBoundry>
+        <HeroComponent heroName={"jocker"} />
+      </ErrorBoundry> */}
+      {/* <ParentComp /> */}
+      <PortalDemo />
     </div>
   );
 }
