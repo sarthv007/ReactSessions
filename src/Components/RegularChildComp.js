@@ -5,4 +5,4 @@ function RegularChildComp(props) {
   return <div>{props.name}</div>;
 }
 
-export default RegularChildComp;
+export default React.memo(RegularChildComp);

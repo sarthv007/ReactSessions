@@ -27,8 +27,9 @@ export default class ParentComp extends Component {
       <div>
         {/* <RegularComponent name={this.state.name} />
         <PureComp name={this.state.name} /> */}
+
         <RegularChildComp name={this.state.name} />
-        <MemoComponentDemo name={this.state.name} />
+        {/* <MemoComponentDemo name={this.state.name} /> */}
       </div>
     );
   }

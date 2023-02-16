@@ -1,5 +1,7 @@
 import logo from "./logo.svg";
+
 import "./App.css";
+//import "bootstrap/dist/css/bootstrap.min.css";
 import Hello from "./Components/Hello";
 import Container from "./Components/Container";
 import HelloWorld from "./Components/HelloWorld";
@@ -28,6 +30,7 @@ import HeroComponent from "./Components/HeroComponent";
 import ErrorBoundry from "./Components/ErrorBoundry";
 import ParentComp from "./Components/ParentComp";
 import PortalDemo from "./Components/PortalDemo";
+import ModalDemo from "./Components/ModalDemo";
 
 function App() {
   return (
@@ -83,6 +86,7 @@ function App() {
       {/* <UpdateLifeCycleMethod></UpdateLifeCycleMethod> */}
       {/* <UnmountingPhaseComp /> */}
       {/* <LifeCycleDemo /> */}
+
       {/* <ErrorBoundry>
         <HeroComponent heroName={"SpiderMan"} />
       </ErrorBoundry>
@@ -94,8 +98,10 @@ function App() {
       <ErrorBoundry>
         <HeroComponent heroName={"jocker"} />
       </ErrorBoundry> */}
+
       {/* <ParentComp /> */}
-      <PortalDemo />
+      <ModalDemo />
+      {/* <PortalDemo /> */}
     </div>
   );
 }

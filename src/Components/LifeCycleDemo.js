@@ -18,26 +18,26 @@ export default class LifeCycleDemo extends Component {
   //   }, 5000);
   // }
 
-  // getSnapshotBeforeUpdate(prevProps, prevState) {
-  //   return {
-  //     counter: 3,
-  //     courseName: "Javascript",
-  //   };
-  // }
+  getSnapshotBeforeUpdate(prevProps, prevState) {
+    return {
+      counter: 3,
+      courseName: "Javascript",
+    };
+  }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
     console.log("prevState", prevState, this.state, snapshot);
-    if (prevState.count < 3) {
+    if (prevState.count < snapshot.counter) {
       this.setState({
         count: this.state.count + 1,
       });
     }
   }
 
-  // shouldComponentUpdate(nextProps, nextState) {
-  //   //performance optimization
-  //   return false;
-  // }
+  shouldComponentUpdate(nextProps, nextState) {
+    //performance optimization
+    return true;
+  }
 
   handleIncrement = () => {
     this.setState({

@@ -11,3 +11,5 @@ export default class PortalDemo extends Component {
     );
   }
 }
+
+//ReactDOM.createPortal(Eleme, Node)
