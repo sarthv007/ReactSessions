@@ -31,6 +31,13 @@ import ErrorBoundry from "./Components/ErrorBoundry";
 import ParentComp from "./Components/ParentComp";
 import PortalDemo from "./Components/PortalDemo";
 import ModalDemo from "./Components/ModalDemo";
+import RefDemo from "./Components/RefDemo";
+import FocusInput from "./Components/FocusInput";
+import PrentFRInput from "./Components/PrentFRInput";
+import Root from "./Components/Root";
+import ClickCounter from "./Components/ClickCounter";
+import HoverCounter from "./Components/HoverCounter";
+import HOCDemoComponent from "./Components/HOCDemoComponent";
 
 function App() {
   return (
@@ -100,8 +107,14 @@ function App() {
       </ErrorBoundry> */}
 
       {/* <ParentComp /> */}
-      <ModalDemo />
+      {/* <ModalDemo /> */}
       {/* <PortalDemo /> */}
+      {/* <FocusInput /> */}
+      {/* <PrentFRInput /> */}
+      {/* <Root /> */}
+      {/* <RefDemo /> */}
+      <HoverCounter name={"sarthak vaidya"} />
+      {/* <HOCDemoComponent /> */}
     </div>
   );
 }
