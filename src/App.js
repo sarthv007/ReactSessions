@@ -35,9 +35,13 @@ import RefDemo from "./Components/RefDemo";
 import FocusInput from "./Components/FocusInput";
 import PrentFRInput from "./Components/PrentFRInput";
 import Root from "./Components/Root";
+import UserComp from "./Components/UserComp";
 import ClickCounter from "./Components/ClickCounter";
-import HoverCounter from "./Components/HoverCounter";
-import HOCDemoComponent from "./Components/HOCDemoComponent";
+import HoverCounter from "./Components/HoverComponent";
+import ClickCounter2 from "./ClickCounter2";
+import HoverCounter2 from "./HoverCounter2";
+import CounterApp from "./CounterApp";
+import HoverComponent from "./Components/HoverComponent";
 
 function App() {
   return (
@@ -113,8 +117,28 @@ function App() {
       {/* <PrentFRInput /> */}
       {/* <Root /> */}
       {/* <RefDemo /> */}
-      <HoverCounter name={"sarthak vaidya"} />
+      {/* <HoverCounter name={"sarthak vaidya"} /> */}
       {/* <HOCDemoComponent /> */}
+      {/* <ClickCounter />
+      <HoverCounter /> */}
+      {/* <UserComp
+        render={(isLoggedIn) => (isLoggedIn ? "Sarthak Vaidya" : "Guest User")}
+      /> */}
+      {/* <ClickCounter name={"sarthak vaidya"} />
+      <HoverCounter /> */}
+      {/* <ClickCounter2 />
+      <HoverCounter2 /> */}
+      <CounterApp
+        render={(counter, increment) => (
+          <ClickCounter2 increment={increment} counter={counter} />
+        )}
+      />
+
+      <CounterApp
+        render={(counter, increment) => (
+          <HoverCounter2 increment={increment} counter={counter} />
+        )}
+      />
     </div>
   );
 }

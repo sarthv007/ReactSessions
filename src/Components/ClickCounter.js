@@ -3,13 +3,11 @@ import HOC from "./HOC";
 
 class ClickCounter extends Component {
   render() {
-    const { counter, increment, decrement } = this.props;
-    console.log("FRom click counter", this.props);
+    console.log(this.props);
     return (
       <div>
-        <h2>Counter: {counter}</h2>
-        <button onClick={increment}>Increment</button>
-        <button onClick={decrement}>Decrement</button>
+        <h2>Counter: {this.props.counter} </h2>
+        <button onClick={this.props.increment}>Increment</button>
       </div>
     );
   }

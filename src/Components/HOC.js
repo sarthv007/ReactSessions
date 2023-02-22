@@ -14,19 +14,13 @@ function HOC(WrappedComponent) {
       this.setState((prevState) => ({ counter: prevState.counter + 1 }));
     };
 
-    decrement = () => {
-      this.setState((prevState) => ({ counter: prevState.counter - 1 }));
-    };
-
     render() {
-      console.log("FRom HOC", this.props);
-
+      console.log("HOC", this.props);
       return (
         <WrappedComponent
           {...this.props}
-          counter={this.state.counter}
-          decrement={this.decrement}
           increment={this.increment}
+          counter={this.state.counter}
         />
       );
     }
