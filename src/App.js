@@ -42,105 +42,152 @@ import ClickCounter2 from "./ClickCounter2";
 import HoverCounter2 from "./HoverCounter2";
 import CounterApp from "./CounterApp";
 import HoverComponent from "./Components/HoverComponent";
+import React from "react";
+import ComponentA from "./Components/context/ComponentA";
+import { Cntx, MyContext } from "./Components/context/Context";
+import ComponentF from "./Components/context/ComponentF";
 
-function App() {
-  return (
-    <div className="App">
-      {/* <Container /> */}
-      {/* <HelloWorld /> */}
-      {/* <HelloWithoutJsx /> */}
-      {/* <Welcome
-        count={100}
-        name="sarthak"
-        title={"Welcome to react js"}
-        data={[1, 2, 3, 4]}
-        flag={true}
-        person={{ firstName: "sarthak", lastName: "vaidya" }}
-      >
-        <p>This is a paragraph</p>
-      </Welcome> */}
-      {/* <SubscriberCounter /> */}
-      {/* <Counter></Counter> */}
-      {/* <DestructuredComp
-        count={100}
-        name="sarthak"
-        title={"Welcome to react js"}
-        data={[1, 2, 3, 4]}
-        flag={true}
-        person={{ firstName: "sarthak", lastName: "vaidya" }}
-      >
-        <p>This is a paragraph</p>
-      </DestructuredComp> */}
+class App extends React.Component {
+  constructor(props) {
+    super(props);
 
-      {/* <DestructureClassComp
-        count={100}
-        name="sarthak"
-        title={"Welcome to react js"}
-        data={[1, 2, 3, 4]}
-        flag={true}
-        person={{ firstName: "sarthak", lastName: "vaidya" }}
-      >
-        <p>This is a paragraph</p>
-      </DestructureClassComp> */}
-      {/* <SubscribeCountToggle /> */}
-      {/* <WelcomeDemo></WelcomeDemo> */}
-      {/* <EventBinding></EventBinding> */}
-      {/* <ParentComponent></ParentComponent> */}
-      {/* <ProfileComponent></ProfileComponent> */}
-      {/* <NameList /> */}
-      {/* <Greet /> */}
-      {/* <UsersList></UsersList> */}
-      {/* <Greet /> */}
-      {/* <TableComponent /> */}
-      {/* <FormComponent></FormComponent> */}
-      {/* <ComponentC name="Nitin" /> */}
-      {/* <UpdateLifeCycleMethod></UpdateLifeCycleMethod> */}
-      {/* <UnmountingPhaseComp /> */}
-      {/* <LifeCycleDemo /> */}
+    this.state = {
+      counter: 0,
+      increment: this.increment,
+      userName: "John Doe",
+      users: [
+        {
+          name: "sarthak",
+          lname: "vaidya",
+          phone: 1231231230,
+        },
+        {
+          name: "Sidhesh",
+          lname: "Tikambare",
+          phone: 1231231231,
+        },
+        ,
+        {
+          name: "Nitin",
+          lname: "Chauhan",
+          phone: 1231231232,
+        },
+      ],
+    };
+  }
 
-      {/* <ErrorBoundry>
-        <HeroComponent heroName={"SpiderMan"} />
-      </ErrorBoundry>
+  increment = () => {
+    alert("from here increment");
+    this.setState((prevState) => ({ counter: prevState.counter + 1 }));
+  };
 
-      <ErrorBoundry>
-        <HeroComponent heroName={"BatMan"} />
-      </ErrorBoundry>
+  render() {
+    return (
+      <div className="App">
+        <MyContext.Provider value={this.state}>
+          <ComponentA />
+        </MyContext.Provider>
+        {/* <Container /> */}
+        {/* <HelloWorld /> */}
+        {/* <HelloWithoutJsx /> */}
+        {/* <Welcome
+          count={100}
+          name="sarthak"
+          title={"Welcome to react js"}
+          data={[1, 2, 3, 4]}
+          flag={true}
+          person={{ firstName: "sarthak", lastName: "vaidya" }}
+        >
+          <p>This is a paragraph</p>
+        </Welcome> */}
+        {/* <SubscriberCounter /> */}
+        {/* <Counter></Counter> */}
+        {/* <DestructuredComp
+          count={100}
+          name="sarthak"
+          title={"Welcome to react js"}
+          data={[1, 2, 3, 4]}
+          flag={true}
+          person={{ firstName: "sarthak", lastName: "vaidya" }}
+        >
+          <p>This is a paragraph</p>
+        </DestructuredComp> */}
 
-      <ErrorBoundry>
-        <HeroComponent heroName={"jocker"} />
-      </ErrorBoundry> */}
+        {/* <DestructureClassComp
+          count={100}
+          name="sarthak"
+          title={"Welcome to react js"}
+          data={[1, 2, 3, 4]}
+          flag={true}
+          person={{ firstName: "sarthak", lastName: "vaidya" }}
+        >
+          <p>This is a paragraph</p>
+        </DestructureClassComp> */}
+        {/* <SubscribeCountToggle /> */}
+        {/* <WelcomeDemo></WelcomeDemo> */}
+        {/* <EventBinding></EventBinding> */}
+        {/* <ParentComponent></ParentComponent> */}
+        {/* <ProfileComponent></ProfileComponent> */}
+        {/* <NameList /> */}
+        {/* <Greet /> */}
+        {/* <UsersList></UsersList> */}
+        {/* <Greet /> */}
+        {/* <TableComponent /> */}
+        {/* <FormComponent></FormComponent> */}
+        {/* <ComponentC name="Nitin" /> */}
+        {/* <UpdateLifeCycleMethod></UpdateLifeCycleMethod> */}
+        {/* <UnmountingPhaseComp /> */}
+        {/* <LifeCycleDemo /> */}
 
-      {/* <ParentComp /> */}
-      {/* <ModalDemo /> */}
-      {/* <PortalDemo /> */}
-      {/* <FocusInput /> */}
-      {/* <PrentFRInput /> */}
-      {/* <Root /> */}
-      {/* <RefDemo /> */}
-      {/* <HoverCounter name={"sarthak vaidya"} /> */}
-      {/* <HOCDemoComponent /> */}
-      {/* <ClickCounter />
-      <HoverCounter /> */}
-      {/* <UserComp
-        render={(isLoggedIn) => (isLoggedIn ? "Sarthak Vaidya" : "Guest User")}
-      /> */}
-      {/* <ClickCounter name={"sarthak vaidya"} />
-      <HoverCounter /> */}
-      {/* <ClickCounter2 />
-      <HoverCounter2 /> */}
-      <CounterApp
-        render={(counter, increment) => (
-          <ClickCounter2 increment={increment} counter={counter} />
-        )}
-      />
+        {/* <ErrorBoundry>
+          <HeroComponent heroName={"SpiderMan"} />
+        </ErrorBoundry>
+  
+        <ErrorBoundry>
+          <HeroComponent heroName={"BatMan"} />
+        </ErrorBoundry>
+  
+        <ErrorBoundry>
+          <HeroComponent heroName={"jocker"} />
+        </ErrorBoundry> */}
 
-      <CounterApp
-        render={(counter, increment) => (
-          <HoverCounter2 increment={increment} counter={counter} />
-        )}
-      />
-    </div>
-  );
+        {/* <ParentComp /> */}
+        {/* <ModalDemo /> */}
+        {/* <PortalDemo /> */}
+        {/* <FocusInput /> */}
+        {/* <PrentFRInput /> */}
+        {/* <Root /> */}
+        {/* <RefDemo /> */}
+        {/* <HoverCounter name={"sarthak vaidya"} /> */}
+        {/* <HOCDemoComponent /> */}
+        {/* <ClickCounter />
+        <HoverCounter /> */}
+        {/* <UserComp
+          render={(isLoggedIn) => (isLoggedIn ? "Sarthak Vaidya" : "Guest User")}
+        /> */}
+        {/* <ClickCounter name={"sarthak vaidya"} />
+        <HoverCounter /> */}
+        {/* <ClickCounter2 />
+        <HoverCounter2 /> */}
+        {/* <CounterApp
+          render={(counter, increment) => (
+            <ClickCounter2 increment={increment} counter={counter} />
+          )}
+        />
+  
+        <CounterApp
+          render={(counter, increment) => (
+            <HoverCounter2 increment={increment} counter={counter} />
+          )}
+        /> */}
+        {/* <MyContext.Provider value={this.state.userName}>
+          <Cntx.Provider value={this.state.users}>
+            <ComponentA />
+          </Cntx.Provider>
+        </MyContext.Provider> */}
+      </div>
+    );
+  }
 }
 
 export default App;
