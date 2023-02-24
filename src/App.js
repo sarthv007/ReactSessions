@@ -46,47 +46,49 @@ import React from "react";
 import ComponentA from "./Components/context/ComponentA";
 import { Cntx, MyContext } from "./Components/context/Context";
 import ComponentF from "./Components/context/ComponentF";
+import HttpRequestComponent from "./Components/HttpRequestComponent";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      counter: 0,
-      increment: this.increment,
-      userName: "John Doe",
-      users: [
-        {
-          name: "sarthak",
-          lname: "vaidya",
-          phone: 1231231230,
-        },
-        {
-          name: "Sidhesh",
-          lname: "Tikambare",
-          phone: 1231231231,
-        },
-        ,
-        {
-          name: "Nitin",
-          lname: "Chauhan",
-          phone: 1231231232,
-        },
-      ],
+      // counter: 0,
+      // increment: this.increment,
+      // userName: "John Doe",
+      // users: [
+      //   {
+      //     name: "sarthak",
+      //     lname: "vaidya",
+      //     phone: 1231231230,
+      //   },
+      //   {
+      //     name: "Sidhesh",
+      //     lname: "Tikambare",
+      //     phone: 1231231231,
+      //   },
+      //   ,
+      //   {
+      //     name: "Nitin",
+      //     lname: "Chauhan",
+      //     phone: 1231231232,
+      //   },
+      // ],
     };
   }
 
-  increment = () => {
-    alert("from here increment");
-    this.setState((prevState) => ({ counter: prevState.counter + 1 }));
-  };
+  // increment = () => {
+  //   alert("from here increment");
+  //   this.setState((prevState) => ({ counter: prevState.counter + 1 }));
+  // };
 
   render() {
     return (
       <div className="App">
-        <MyContext.Provider value={this.state}>
+        <HttpRequestComponent />
+        {/* <MyContext.Provider value={this.state}>
           <ComponentA />
-        </MyContext.Provider>
+        </MyContext.Provider> */}
         {/* <Container /> */}
         {/* <HelloWorld /> */}
         {/* <HelloWithoutJsx /> */}
