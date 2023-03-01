@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 
-import "./App.css";
-//import "bootstrap/dist/css/bootstrap.min.css";
+//import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import Hello from "./Components/Hello";
 import Container from "./Components/Container";
 import HelloWorld from "./Components/HelloWorld";
@@ -47,6 +47,20 @@ import ComponentA from "./Components/context/ComponentA";
 import { Cntx, MyContext } from "./Components/context/Context";
 import ComponentF from "./Components/context/ComponentF";
 import HttpRequestComponent from "./Components/HttpRequestComponent";
+import ClassCounter from "./ClassCounter";
+import FunctionCounter from "./FunctionCounter";
+import FunctionCounterTwo from "./FunctionCounterTwo";
+import FunctionComp1 from "./FunctionComp1";
+import FunctionComp2 from "./FunctionComp2";
+import FunctionComp3 from "./FunctionComp3";
+import DocumentTitleComp from "./Components/DocumentTitleComp";
+import HookMouse from "./Components/HookMouse";
+import MouseContainer from "./Components/MouseContainer";
+import UpdateDocTitleUsingFunctionComp from "./Components/UpdateDocTitleUsingFunctionComp";
+import HooksWrapper from "./Components/HooksWrapper";
+import TableWrapper from "./Components/TableWrapper";
+import HookFetchApi from "./HookFetchApi";
+import FetchDataUsingHook from "./Components/FetchDataUsingHook";
 
 class App extends React.Component {
   constructor(props) {
@@ -85,7 +99,14 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <HttpRequestComponent />
+        {/* <HookFetchApi /> */}
+        <FetchDataUsingHook />
+        {/* <FunctionCounterTwo /> */}
+        {/* <DocumentTitleComp /> */}
+
+        {/* <ClassCounter />
+        <FunctionCounter /> */}
+        {/* <HttpRequestComponent /> */}
         {/* <MyContext.Provider value={this.state}>
           <ComponentA />
         </MyContext.Provider> */}

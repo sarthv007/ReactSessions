@@ -40,10 +40,15 @@ export class FormComponent extends Component {
 
   handleSubmit = (event) => {
     //Api call logic will go here
+    const { firstName, lastName, country } = this.state;
     event.preventDefault();
     if (this.validate()) {
-      const { firstName, lastName, country } = this.state;
-      alert(`Form Submited ${firstName} ${lastName} ${country}`);
+      //alert(`Form Submited ${firstName} ${lastName} ${country}`);
+      this.props.addToJsonArray({
+        firstName: firstName,
+        lastName: lastName,
+        country: country,
+      });
     }
   };
 
@@ -76,6 +81,7 @@ export class FormComponent extends Component {
         error: err,
       });
     }
+    return flag;
   };
 
   render() {
