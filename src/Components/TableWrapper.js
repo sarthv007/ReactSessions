@@ -3,12 +3,23 @@ import { Button, Table } from "reactstrap";
 import FormComponent from "./FormComponent";
 import "./TableWrapper.scss";
 
-function TableWrapper({ rows, columns, addToJsonArray }) {
+function TableWrapper({
+  rows,
+  columns,
+  addToJsonArray,
+  showForm,
+  setShowForm,
+}) {
   return (
     <div className="wrapper">
-      <FormComponent addToJsonArray={addToJsonArray} />
+      {showForm ? <FormComponent addToJsonArray={addToJsonArray} /> : null}
+      <br />
 
-      <Button color="primary">Add New</Button>
+      <Button color="primary" onClick={() => setShowForm(true)}>
+        Add New User
+      </Button>
+      <br />
+      <br />
       <Table hover className="tableWrapper">
         <thead>
           <tr>{columns && columns.map((col) => <th>{col}</th>)}</tr>

@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 
-//import "./App.css";
+import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Hello from "./Components/Hello";
 import Container from "./Components/Container";
@@ -61,46 +61,51 @@ import HooksWrapper from "./Components/HooksWrapper";
 import TableWrapper from "./Components/TableWrapper";
 import HookFetchApi from "./HookFetchApi";
 import FetchDataUsingHook from "./Components/FetchDataUsingHook";
+import FetchSignleRecord from "./Components/FetchSingleRecord";
+import UseRefHookRefDemo from "./UseRefHookRefDemo";
+import ClassInterval from "./Components/ClassInterval";
+import HookInterval from "./Components/HookInterval";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      // counter: 0,
-      // increment: this.increment,
-      // userName: "John Doe",
-      // users: [
-      //   {
-      //     name: "sarthak",
-      //     lname: "vaidya",
-      //     phone: 1231231230,
-      //   },
-      //   {
-      //     name: "Sidhesh",
-      //     lname: "Tikambare",
-      //     phone: 1231231231,
-      //   },
-      //   ,
-      //   {
-      //     name: "Nitin",
-      //     lname: "Chauhan",
-      //     phone: 1231231232,
-      //   },
-      // ],
+      counter: 0,
+      increment: this.increment,
+      userName: "John Doe",
+      users: [
+        {
+          name: "sarthak",
+          lname: "vaidya",
+          phone: 1231231230,
+        },
+        {
+          name: "Sidhesh",
+          lname: "Tikambare",
+          phone: 1231231231,
+        },
+        ,
+        {
+          name: "Nitin",
+          lname: "Chauhan",
+          phone: 1231231232,
+        },
+      ],
     };
   }
 
-  // increment = () => {
-  //   alert("from here increment");
-  //   this.setState((prevState) => ({ counter: prevState.counter + 1 }));
-  // };
+  increment = () => {
+    alert("from here increment");
+    this.setState((prevState) => ({ counter: prevState.counter + 1 }));
+  };
 
   render() {
     return (
       <div className="App">
+        {/* <FetchSignleRecord /> */}
         {/* <HookFetchApi /> */}
-        <FetchDataUsingHook />
+        {/* <FetchDataUsingHook /> */}
         {/* <FunctionCounterTwo /> */}
         {/* <DocumentTitleComp /> */}
 
@@ -208,6 +213,9 @@ class App extends React.Component {
             <ComponentA />
           </Cntx.Provider>
         </MyContext.Provider> */}
+        {/* <UseRefHookRefDemo /> */}
+        {/* <ClassInterval /> */}
+        <HookInterval />
       </div>
     );
   }

@@ -6,17 +6,17 @@ function ComponentF() {
   const userName = useContext(MyContext);
   const users = useContext(Cntx);
   return (
-    <ComponentG />
-    // <>
-    //   <h2>{userName}</h2>
-    //   {users.map((user) => (
-    //     <>
-    //       <h2>{user.name}</h2>
-    //       <h2>{user.lname}</h2>
-    //       <h2>{user.phone}</h2>
-    //     </>
-    //   ))}
-    // </>
+    // <ComponentG />
+    <>
+      <h2>{userName}</h2>
+      {users.map((user) => (
+        <>
+          <h2>{user.name}</h2>
+          <h2>{user.lname}</h2>
+          <h2>{user.phone}</h2>
+        </>
+      ))}
+    </>
 
     // <MyContext.Consumer>
     //   {(userName) => (
