@@ -65,6 +65,11 @@ import FetchSignleRecord from "./Components/FetchSingleRecord";
 import UseRefHookRefDemo from "./UseRefHookRefDemo";
 import ClassInterval from "./Components/ClassInterval";
 import HookInterval from "./Components/HookInterval";
+import HookCounter from "./Components/HookCounter";
+import ReducerHookDemo from "./Components/ReducerHookDemo";
+import ReducerDemoTwo from "./Components/ReducerDemoTwo";
+import FetchDataUsingReducerHook from "./Components/FetchDataUsingReducerHook";
+import ParentComponentDemo from "./Components/ParentComponentDemo";
 
 class App extends React.Component {
   constructor(props) {
@@ -103,6 +108,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        {/* <FetchDataUsingReducerHook /> */}
         {/* <FetchSignleRecord /> */}
         {/* <HookFetchApi /> */}
         {/* <FetchDataUsingHook /> */}
@@ -215,7 +221,11 @@ class App extends React.Component {
         </MyContext.Provider> */}
         {/* <UseRefHookRefDemo /> */}
         {/* <ClassInterval /> */}
-        <HookInterval />
+        {/* <HookInterval /> */}
+        {/* <HookCounter /> */}
+        {/* <ReducerHookDemo /> */}
+        {/* <ReducerDemoTwo /> */}
+        <ParentComponentDemo />
       </div>
     );
   }

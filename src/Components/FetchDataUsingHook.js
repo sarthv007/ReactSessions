@@ -1,52 +1,35 @@
 import React, { useEffect, useState } from "react";
-import { Button, Input, Table } from "reactstrap";
-
+import axios from "axios";
 function FetchDataUsingHook() {
-  const [users, setUsers] = useState([]);
+  const [user, setUser] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((resoponse) => resoponse.json())
+    axios
+      .get("https://jsonplaceholder.typicode.com/users/1")
       .then((res) => {
-        console.log(res);
-        setUsers(res);
+        console.log(res.data);
+        setLoading(false);
+        setUser(res.data);
+        setError("");
+      })
+      .catch((error) => {
+        console.log(error);
+        setLoading(false);
+        setUser({});
+        setError("Something went wrong");
       });
   }, []);
 
-  const usersHtml =
-    users &&
-    users.length &&
-    users.map((user) => (
-      <tr>
-        <th scope="row">{user.id}</th>
-        <td>{user.name}</td>
-        <td>{user.email}</td>
-        <td>{user.username}</td>
-      </tr>
-    ));
-
   return (
-    <div>
+    <>
       <h2>Welcome to React useEffect</h2>
-
-      <Button color="primary" href="#" tag="a">
-        Fetch Data
-      </Button>
-
-      {users.length ? (
-        <Table hover>
-          <thead>
-            <tr>
-              <th>#ID</th>
-              <th>First Name</th>
-              <th>Email</th>
-              <th>Username</th>
-            </tr>
-          </thead>
-          <tbody>{usersHtml}</tbody>
-        </Table>
-      ) : null}
-    </div>
+      <div>
+        {loading ? <div>Loading...</div> : user.name}
+        {error ? error : null}
+      </div>
+    </>
   );
 }
 
