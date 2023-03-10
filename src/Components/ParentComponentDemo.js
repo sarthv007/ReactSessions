@@ -15,7 +15,7 @@ function ParentComponentDemo() {
     setAge((prevAge) => prevAge + 1);
   }, [age]);
 
-  return (
+  const html = (
     <div>
       <Title />
       <CounterComp text={"Age"} counter={age} />
@@ -24,6 +24,8 @@ function ParentComponentDemo() {
       <ButtonComp text={"Salary"} handleClick={incrementSalary} />
     </div>
   );
+  console.log(html);
+  return html;
 }
 
 export default ParentComponentDemo;

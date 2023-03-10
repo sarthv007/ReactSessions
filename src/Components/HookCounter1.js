@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import useCounter from "./useCounter";
 
-function HookCounter() {
+function HookCounter1() {
   const intialState = 0;
-
   const [counter, increment, decrement, reset] = useCounter(intialState);
 
   return (
@@ -16,4 +15,4 @@ function HookCounter() {
   );
 }
 
-export default HookCounter;
+export default HookCounter1;

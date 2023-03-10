@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 
-import "./App.css";
+//import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Hello from "./Components/Hello";
 import Container from "./Components/Container";
@@ -70,6 +70,19 @@ import ReducerHookDemo from "./Components/ReducerHookDemo";
 import ReducerDemoTwo from "./Components/ReducerDemoTwo";
 import FetchDataUsingReducerHook from "./Components/FetchDataUsingReducerHook";
 import ParentComponentDemo from "./Components/ParentComponentDemo";
+import HooksCounterParent from "./Components/HooksCounterParent";
+import HookCounter1 from "./Components/HookCounter1";
+import FetchAPiHookDemo from "./Components/FetchAPiHookDemo";
+import HookFormDemo from "./Components/HookFormDemo";
+import VirtualDomDemo from "./VirtualDomDemo";
+import CakeShopComponent from "./Components/CakeShopComponent";
+import ReduxCounter from "./Components/ReduxCounter";
+import { Route, Routes } from "react-router-dom";
+import UserList from "./Components/CRUD/UserList";
+import AddUser from "./Components/CRUD/AddUser";
+import EditUser from "./Components/CRUD/EditUser";
+import HookCounterApplication from "./Components/HookCounterApplication";
+import HookCakeApplication from "./Components/HookCounterApplication";
 
 class App extends React.Component {
   constructor(props) {
@@ -107,7 +120,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App" style={{ padding: "20px" }}>
         {/* <FetchDataUsingReducerHook /> */}
         {/* <FetchSignleRecord /> */}
         {/* <HookFetchApi /> */}
@@ -225,7 +238,22 @@ class App extends React.Component {
         {/* <HookCounter /> */}
         {/* <ReducerHookDemo /> */}
         {/* <ReducerDemoTwo /> */}
-        <ParentComponentDemo />
+        {/* <ParentComponentDemo /> */}
+        {/* <HookCounter />
+        <HookCounter1 /> */}
+        {/* <FetchAPiHookDemo /> */}
+        {/* <HookFormDemo /> */}
+        {/* <VirtualDomDemo /> */}
+        {/* <CakeShopComponent courseName={"Javascript"} /> */}
+        {/* <HookCakeApplication /> */}
+        {/* <ReduxCounter /> */}
+        {/* <HookCounterApplication /> */}
+        {/* <ReduxCounter /> */}
+        <Routes>
+          <Route path="/" element={<UserList />} />
+          <Route path="add" element={<AddUser />} />
+          <Route path="edit/:id" element={<EditUser />} />
+        </Routes>
       </div>
     );
   }
