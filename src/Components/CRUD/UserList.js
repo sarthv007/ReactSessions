@@ -3,26 +3,31 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { Button, Table } from "reactstrap";
 import NavBarComp from "./NavBarComp";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteUserID, getUsers } from "../../Actions/UsersAction";
 
 const UserList = () => {
-  const [users, setUser] = useState([]);
+  //const [users, setUser] = useState([]);
+  const { loading, users, error } = useSelector((state) => state.usersReducer);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    getUsers();
+    dispatch(getUsers());
   }, []);
 
-  const getUsers = async () => {
-    const response = await axios.get("http://localhost:5000/users");
-    setUser(response.data);
-  };
+  // const getUsers = async () => {
+  //   const response = await axios.get("http://localhost:5000/users");
+  //   setUser(response.data);
+  // };
 
   const deleteUser = async (id) => {
-    try {
-      await axios.delete(`http://localhost:5000/users/${id}`);
-      getUsers();
-    } catch (error) {
-      console.log(error);
-    }
+    dispatch(deleteUserID(id));
+    // try {
+    //   await axios.delete(`http://localhost:5000/users/${id}`);
+    //   getUsers();
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
 
   return (

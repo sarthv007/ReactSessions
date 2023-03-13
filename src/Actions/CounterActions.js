@@ -12,6 +12,7 @@ export const derementCounter = () => {
   };
 };
 
+//normal action creator
 export const resetCounter = () => {
   return {
     type: RESET,

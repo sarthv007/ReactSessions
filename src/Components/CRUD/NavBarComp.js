@@ -21,7 +21,7 @@ function NavBarComp(args) {
 
   return (
     <div>
-      <Navbar expand={false} full={true}>
+      <Navbar>
         <NavbarBrand href="/">Reactstrap Crud Application</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
@@ -38,7 +38,7 @@ function NavBarComp(args) {
               <DropdownToggle nav caret>
                 Options
               </DropdownToggle>
-              <DropdownMenu right>
+              <DropdownMenu>
                 <DropdownItem>Option 1</DropdownItem>
                 <DropdownItem>Option 2</DropdownItem>
                 <DropdownItem divider />

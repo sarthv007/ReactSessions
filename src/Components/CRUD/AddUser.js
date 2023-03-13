@@ -5,8 +5,10 @@ import { Button, FormGroup, Input, Label } from "reactstrap";
 import style from "./AddUser.module.scss";
 import TitleComp from "./TitleComp";
 import FormButtons from "./FormButtons";
+import { connect } from "react-redux";
+import { addUser } from "../../Actions/UsersAction";
 
-const AddUser = () => {
+const AddUser = (props) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [gender, setGender] = useState("Male");
@@ -14,16 +16,19 @@ const AddUser = () => {
 
   const saveUser = async (e) => {
     e.preventDefault();
-    try {
-      await axios.post("http://localhost:5000/users", {
-        name,
-        email,
-        gender,
-      });
-      navigate("/");
-    } catch (error) {
-      console.log(error);
-    }
+
+    // try {
+    //   await axios.post("http://localhost:5000/users", {
+    //     name,
+    //     email,
+    //     gender,
+    //   });
+    //   navigate("/");
+    // } catch (error) {
+    //   console.log(error);
+    // }
+    props.addUser({ name, email, gender });
+    navigate("/");
   };
 
   return (
@@ -69,4 +74,10 @@ const AddUser = () => {
   );
 };
 
-export default AddUser;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addUser: (user) => dispatch(addUser(user)),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(AddUser);
